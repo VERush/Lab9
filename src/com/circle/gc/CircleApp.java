@@ -8,11 +8,10 @@ public class CircleApp {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Welcome to the Circle Tester");
 
-		double circumference, area;
 		double radius = 0;
 		int counter = 0;
 		boolean inputValid = true;
-		String input, output;
+		String input;
 		String cont = "y";
 
 		// Loop through creating circles
@@ -50,5 +49,6 @@ public class CircleApp {
 		} else {
 			System.out.println("Thanks for using Circle Tester.  You tested " + counter + " circles.");
 		}
+	scan.close();	
 	}
 }
