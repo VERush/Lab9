@@ -1,35 +1,37 @@
 package com.circle.gc;
 
 public class Circle {
-	double classRadius;
+	// Added private to variable declaration
+	private double classRadius;
+	private double circumference, area;
+	private String number, formatCirc, formatArea;
 
 	public Circle(double radius) {
 		classRadius = radius;
 	}
 	
 	public double getCircumference() {
-		double circumference = classRadius * 2 * Math.PI;
+		circumference = classRadius * 2 * Math.PI;
 		return circumference;
 	}
 
 	public double getArea() {
-		double circumference = (Math.pow(classRadius, 2) * Math.PI);
-		return circumference;
+		area = (Math.pow(classRadius, 2) * Math.PI);
+		return area;
 	}
 
 	public String getFormattedCircumference() {
-		String formatCirc = formatNumber(getCircumference());
+		formatCirc = formatNumber(getCircumference());
 		return formatCirc;
 	}
 
 	public String getFormattedArea() {
-		String formatCirc = formatNumber(getArea());
-		return formatCirc;
+		formatArea = formatNumber(getArea());
+		return formatArea;
 	}
 
 	private String formatNumber(double x) {
-		String number = String.format("%1$.2f", x);
-
+		number = String.format("%1$.2f", x);
 		return number;
 	}
 
